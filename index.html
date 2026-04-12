@@ -576,7 +576,41 @@
         .gallery-item:hover .gallery-caption {
             transform: translateY(0);
         }
+
+        .view-more-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-gallery {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            padding: 12px 32px;
+            font-size: 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gallery:hover {
+            background: #d4af37;
+            color: #1a1a2e;
+            transform: translateY(-2px);
+        }
+
+        .btn-gallery i {
+            transition: transform 0.3s ease;
+        }
         
+        .btn-gallery:hover i:last-child {
+            transform: translateX(5px);
+        }
+
         /* Contact Section */
         .contact {
             background-color: var(--light-gray);
@@ -934,7 +968,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             
@@ -992,7 +1026,7 @@
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-home"></i></div>
                     <div class="service-content">
-                        <h3>Residential Electrical</h3>
+                        <h3>Residential </h3>
                         <p>Complete home electrical services including wiring, panel upgrades, and lighting installation.</p>
                         <a href="#contact" class="btn">Learn More</a>
                     </div>
@@ -1000,7 +1034,7 @@
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-building"></i></div>
                     <div class="service-content">
-                        <h3>Agricultural/Commercial Electrical</h3>
+                        <h3>Agricultural/Commercial </h3>
                         <p>Professional electrical solutions for farms, businesses, offices, and commercial properties.</p>
                         <a href="#contact" class="btn">Learn More</a>
                     </div>
@@ -1066,7 +1100,6 @@
                         <div class="feature"><i class="fas fa-check-circle"></i><p>RECI registered and insured electricians</p></div>
                         <div class="feature"><i class="fas fa-check-circle"></i><p>24/7 emergency services available</p></div>
                         <div class="feature"><i class="fas fa-check-circle"></i><p>Upfront pricing with no hidden fees</p></div>
-                        <div class="feature"><i class="fas fa-check-circle"></i><p>Full RECI certification after all work</p></div>
                     </div>
                     <a href="#contact" class="btn">Contact Us Today</a>
                 </div>
@@ -1090,10 +1123,6 @@
                     <div class="faq-answer"><p>Yes, we are fully RECI registered and comply with all Irish electrical safety standards and regulations. All work comes with full certification.</p></div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Do you provide certification after electrical work? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer"><p>Absolutely. We provide full RECI certification for all electrical work completed, ensuring your installation meets safety standards.</p></div>
-                </div>
-                <div class="faq-item">
                     <div class="faq-question">Do you charge a call-out fee? <i class="fas fa-chevron-down"></i></div>
                     <div class="faq-answer"><p>We do charge call-out fees which are dependent on distance away.</p></div>
                 </div>
@@ -1113,10 +1142,16 @@
                 <p>Take a look at some of our recent projects</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Electrical Panel"><div class="gallery-caption">Consumer Unit Upgrade</div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Commercial Lighting"><div class="gallery-caption">Commercial Lighting</div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="House Wiring"><div class="gallery-caption">House Rewiring</div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1564767655650-75c6f5b5f35e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Garden Lighting"><div class="gallery-caption">Garden Lighting</div></div>
+                <div class="gallery-item"><img src="exterior_lights_house.jpeg" alt="Electrical Panel"><div class="gallery-caption">Garden Lighting</div></div>
+                <div class="gallery-item"><img src="shed_lights.jpeg" alt="Commercial Lighting"><div class="gallery-caption">Shed Lighting</div></div>
+                <div class="gallery-item"><img src="pitchlights.jpeg" alt="House Wiring"><div class="gallery-caption">Exterior Lighting</div></div>
+                <div class="gallery-item"><img src="church_exterior.jpeg" alt="Garden Lighting"><div class="gallery-caption">Exterior LED Lighting</div></div>
+            </div>
+            <div class="view-more-container">
+                <a href="gallery.html" class="btn btn-gallery">
+                    <i class="fas fa-images"></i> View Full Gallery
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -1140,7 +1175,7 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div><h4>Email</h4><p><a href="mailto:info@mohelectrical.ie">info@mohelectrical.ie</a></p></div>
+                        <div><h4>Email</h4><p><a href="mailto:mohelectricalservices@gmail.com">mohelectricalservices@gmail.com</a></p></div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-clock"></i></div>
@@ -1201,8 +1236,8 @@
                 <div class="footer-col">
                     <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#services">Residential Electrical</a></li>
-                        <li><a href="#services">Commercial Electrical</a></li>
+                        <li><a href="#services">Residential </a></li>
+                        <li><a href="#services">Commercial </a></li>
                         <li><a href="#services">Electrical Repairs</a></li>
                         <li><a href="#services">Emergency Services</a></li>
                         <li><a href="#services">EV Charger Installation</a></li>
@@ -1211,9 +1246,9 @@
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-phone"></i> 087 643 6359</li>
-                        <li><i class="fas fa-envelope"></i> info@mohelectrical.ie</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Ballinrobe, Co.Mayo</li>
+                        <li><i class="fas fa-phone"></i> Call Mark at 087 643 6359</li>
+                        <li><i class="fas fa-envelope"></i> mohelectricalservices@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> The Neale, Ballinrobe, Co.Mayo</li>
                     </ul>
                     <div class="footer-cta">
                         <a href="tel:0876436359" class="btn btn-emergency"><i class="fas fa-bolt"></i> Emergency: 24/7</a>

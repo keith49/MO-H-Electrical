@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>M.O'H ELECTRICAL | Project Gallery - Our Electrical Work</title>
+    <meta name="description" content="View our portfolio of electrical projects including consumer unit upgrades, house rewiring, commercial lighting, and more. RECI registered electrician in Mayo.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #2d3436;
+        }
+
+        /* Header & Navigation - Matching main site */
+        :root {
+            --primary-dark: #1a1a2e;
+            --primary-navy: #16213e;
+            --accent-gold: #d4af37;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+        }
+
+        .emergency-banner {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+
+        .emergency-banner a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4af37;
+            font-size: 1.3rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            margin-bottom: 2px;
+            color: #1a1a2e;
+        }
+
+        .logo-text span {
+            font-size: 0.6rem;
+            color: #b8960c;
+            letter-spacing: 1.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #2d3436;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 0;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #1a1a2e;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .phone-number {
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .phone-number i {
+            color: #d4af37;
+            margin-right: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 22px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 0.85rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: #1a1a2e;
+        }
+
+        /* Gallery Page Specific Styles */
+        .page-header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .page-header h1 i {
+            color: #d4af37;
+            margin-right: 10px;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Filter Buttons */
+        .filter-section {
+            padding: 40px 0 20px;
+            text-align: center;
+            background-color: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 22px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            padding: 50px 0 80px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .image-container {
+            position: relative;
+            height: 260px;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .image-container img {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 26, 46, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay i {
+            color: white;
+            font-size: 2.5rem;
+            background: rgba(0,0,0,0.5);
+            padding: 15px;
+            border-radius: 50%;
+        }
+
+        .gallery-info {
+            padding: 18px;
+        }
+
+        .gallery-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #1a1a2e;
+        }
+
+        .gallery-info p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            margin-top: 8px;
+            color: #1a1a2e;
+        }
+
+        /* Lightbox Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            cursor: pointer;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-content img {
+            width: auto;
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .modal-caption {
+            text-align: center;
+            color: white;
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.1);
+        }
+
+        /* Call to Action Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 50px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-banner h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-banner .btn {
+            background: #d4af37;
+            color: #1a1a2e;
+            margin-top: 15px;
+        }
+
+        .cta-banner .btn:hover {
+            background: #c49f2a;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 35px;
+            margin-bottom: 35px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #d4af37;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.75rem;
+            color: #cbd5e0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                background: white;
+                padding: 20px 0;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-menu li {
+                text-align: center;
+                padding: 10px 0;
+            }
+            .header-cta .phone-number {
+                display: none;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .filter-btn {
+                padding: 6px 15px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <div class="container">
+            <p><i class="fas fa-bolt"></i> 24/7 Emergency Electrical Services - <a href="tel:0876436359">Call Now: 087 643 6359</a></p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>M.O'H ELECTRICAL</h1>
+                    <span>RECI REGISTERED • SAFE ELECTRIC</span>
+                </div>
+            </div>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+            <div class="header-cta">
+                <div class="phone-number">
+                    <i class="fas fa-phone"></i> 087 643 6359
+                </div>
+                <a href="#contact" class="btn">Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-images"></i> Our Project Gallery</h1>
+            <p>Browse through our recent electrical installations and projects across Mayo</p>
+        </div>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="panel">Panel Upgrades</button>
+                <button class="filter-btn" data-filter="lighting">Lighting</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Residential Projects -->
+                <div class="gallery-item" data-category="residential lighting">
+                    <div class="image-container">
+                        <img src="shed_lights.jpeg" alt="Exterior lights fitted">
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Shed Lights</h3>
+                        <p>Lights fitted in a new shed</p>
+                        <span class="category-tag">Residential | Lighting</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="residential lighting">
+                    <div class="image-container">
+                        <img src="chandelior.jpeg" >
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Chandelier fitted</h3>
+                        <p>Chandeleir fitted in a house hallway</p>
+                        <span class="category-tag">Residential | Lighting</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="residential">
+                    <div class="image-container">
+                        <img src="house.jpeg" alt="Complete house rewiring project">
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Full House Rewiring</h3>
+                        <p>Complete rewiring of a house including new sockets and lighting circuits</p>
+                        <span class="category-tag">Residential | Rewiring</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="residential lighting">
+                    <div class="image-container">
+                        <img src="exterior_lights_house.jpeg" alt="Garden lighting installation">
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Garden & Landscape Lighting</h3>
+                        <p>LED garden lighting</p>
+                        <span class="category-tag">Residential | Lighting</span>
+                    </div>
+                </div>
+
+                <!-- Commercial Projects -->
+                <div class="gallery-item" data-category="commercial lighting">
+                    <div class="image-container">
+                        <img src="church_exterior.jpeg" >
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Exterior LED Lighting Upgrade</h3>
+                        <p>Energy-efficient LED lighting</p>
+                        <span class="category-tag">Commercial | Lighting</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial lighting">
+                    <div class="image-container">
+                        <img src="pitchlights.jpeg" >
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Exterior Lighting Upgrade</h3>
+                        <p>Exterior lighting for GAA clubhouse</p>
+                        <span class="category-tag">Commercial | Lighting</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial lighting">
+                    <div class="image-container">
+                        <img src="church_exterior2.jpeg" >
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Exterior LED Lighting Upgrade</h3>
+                        <p>Energy-efficient LED lighting</p>
+                        <span class="category-tag">Commercial | Lighting</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial lighting">
+                    <div class="image-container">
+                        <img src="church_interior_cross.jpeg" >
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Church Lighting Upgrade</h3>
+                        <p>A much needed upgrade to the interior lighting of a church</p>
+                        <span class="category-tag">Commercial | Lighting</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial lighting">
+                    <div class="image-container">
+                        <img src="church_interior_altar.jpeg" >
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Church Lighting Upgrade</h3>
+                        <p>A much needed upgrade to the interior lighting of a church</p>
+                        <span class="category-tag">Commercial | Lighting</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial lighting">
+                    <div class="image-container">
+                        <img src="church_interior_window.jpeg" alt="Retail store electrical fit-out">
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Church Lighting Upgrade</h3>
+                        <p>A much needed upgrade to the interior lighting of a church</p>
+                        <span class="category-tag">Commercial | Lighting</span>
+                    </div>
+                </div>
+
+                <!-- Panel Upgrades -->
+                <div class="gallery-item" data-category="panel">
+                    <div class="image-container">
+                        <img src="panel.jpeg" alt="Old fuse board replacement">
+                        <div class="overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Old Fuse Board Replacement</h3>
+                        <p>Replacement of outdated fuse board with modern consumer unit</p>
+                        <span class="category-tag">Panel Upgrade | Safety</span>
+                    </div>
+                </div>
+
+
+                <!-- Lighting Projects -->
+                
+
+                
+
+                <!-- Additional Residential -->
+                
+
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Banner -->
+    <div class="cta-banner">
+        <div class="container">
+            <h2>Have a Project in Mind?</h2>
+            <p>Contact us today for a free, no-obligation quote on your electrical project</p>
+            <a href="tel:0876436359" class="btn"><i class="fas fa-phone"></i> Call 087 643 6359</a>
+            <a href="#contact" class="btn" style="background: transparent; border: 2px solid #d4af37; color: #d4af37; margin-left: 10px;">Get Free Quote</a>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="modal" id="lightboxModal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>M.O'H Electrical</h3>
+                    <p>Professional RECI registered electrical services for residential and commercial clients across Mayo.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> 087 643 6359</li>
+                        <li><i class="fas fa-envelope"></i> mohelectricalservices@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> The Neale, Ballinrobe, Co. Mayo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 M.O'H Electrical. All Rights Reserved. | RECI Registered • Safe Electric • Fully Insured</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Gallery Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    const categories = item.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Lightbox Modal Functionality
+        const modal = document.getElementById('lightboxModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        const closeModal = document.querySelector('.close-modal');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('.image-container img');
+                const title = item.querySelector('.gallery-info h3').textContent;
+                const description = item.querySelector('.gallery-info p').textContent;
+                
+                modalImage.src = img.src;
+                modalCaption.innerHTML = `<strong>${title}</strong><br>${description}`;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
